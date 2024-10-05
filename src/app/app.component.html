@@ -2,25 +2,25 @@
   <nav class="side-menu">
     <ul>
       <li>
-        <a >
+        <a (click)="navigateTo('/home')">
           <i class="fas fa-home"></i>
           <span>Home</span>
         </a>
       </li>
       <li>
-        <a >
+        <a (click)="navigateTo('/angajati')" >
           <i class="fas fa-file-alt"></i>
           <span>Angajati</span>
         </a>
       </li>
       <li>
-        <a>
+        <a (click)="navigateTo('/bugete')">
           <i class="fas fa-chart-bar"></i>
           <span>Bugete</span>
         </a>
       </li>
       <li>
-        <a >
+        <a (click)="navigateTo('/resurse')">
           <i class="fas fa-cogs"></i>
           <span>Resurse</span>
         </a>
@@ -29,5 +29,7 @@
   </nav>
 
   <div class="content">
+    <h1>Hello, aici vor fi randate toate componentele pe baza de routes cu router-outlet</h1>
+    <router-outlet></router-outlet>
   </div>
 </div>

@@ -1,56 +1,82 @@
 .container {
-    display: flex;
-  }
-  
-  .side-menu {
-    width: 60px;
-    background-color: #333;
-    height: 100vh;
-    transition: width 0.3s ease; 
-    overflow: hidden;
-  }
-  
-  .side-menu:hover {
-    width: 200px;
-  }
-  
-  .side-menu ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .side-menu li {
-    padding: 15px;
-    text-align: center;
-  }
-  
-  .side-menu a {
-    color: white;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    cursor: pointer;
-    transition: color 0.3s ease;
-  }
-  
-  .side-menu a:hover {
-    color: #00ff00;
-  }
-  
-  .side-menu a span {
-    margin-left: 10px;
-    display: inline-block; 
-    opacity: 0; 
-    white-space: nowrap; 
-  }
-  
-  .side-menu:hover a span {
-    opacity: 1; 
-    transform: translateX(0); 
-  }
-  
-  .side-menu {
-    overflow-x: hidden; 
-  }
-  
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.side-menu {
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(90deg, #1e3c72, #2a5298);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  transition: height 0.4s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.side-menu:hover {
+  height: 100px;
+}
+
+.side-menu ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.side-menu li {
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.side-menu a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+  border-radius: 15px;
+}
+
+.side-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fbc531;
+}
+
+.side-menu a i {
+  font-size: 1.5em;
+  transition: transform 0.3s ease;
+}
+
+.side-menu a span {
+  margin-left: 10px;
+  font-size: 1em;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.side-menu:hover a span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.side-menu:hover a i {
+  transform: rotate(360deg);
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f7f7f7;
+}
