@@ -1,0 +1,32 @@
+<!-- employees.component.html -->
+<div class="employees-container">
+  <h1>Angajați</h1>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nume</th>
+          <th>Pozitie</th>
+          <th>Email</th>
+          <th>Telefon</th>
+          <th>Data Angajării</th>
+          <th>Acțiuni</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees">
+          <td>{{ employee.id }}</td>
+          <td>{{ employee.name }}</td>
+          <td>{{ employee.position }}</td>
+          <td>{{ employee.email }}</td>
+          <td>{{ employee.phone }}</td>
+          <td>{{ employee.hireDate | date : "dd/MM/yyyy" }}</td>
+          <td>
+            <button (click)="viewDetails(employee.id)">Detalii</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

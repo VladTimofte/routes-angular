@@ -1,0 +1,33 @@
+/* employees.component.css */
+.budgets-container {
+    padding: 50px;
+    background-color: #f9f9f9;
+    width: 100%;
+  }
+  
+  table {
+    width: 100%; /* Asigură-te că tabelul folosește întreaga lățime */
+    border-collapse: collapse;
+    table-layout: auto; /* Permite ajustarea automată a coloanelor */
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  button {
+    background-color: #4CAF50; /* Verde închis */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin: 2px;
+    border-radius: 6px;
+  }
+  
+  button:hover {
+    background-color: #45a049; /* Nuantă mai deschisă la hover */
+  }
+  

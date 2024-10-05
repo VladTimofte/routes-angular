@@ -1,0 +1,34 @@
+<!-- budgets.component.html -->
+<div class="budgets-container">
+    <h1>Bugete</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Descriere</th>
+          <th>Sumă (RON)</th>
+          <th>Data</th>
+          <th>Categorie</th>
+          <th>Status</th>
+          <th>Responsabil</th>
+          <th>Acțiuni</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let budget of budgets">
+          <td>{{ budget.id }}</td>
+          <td>{{ budget.description }}</td>
+          <td>{{ budget.amount | number:'1.2-2' }}</td>
+          <td>{{ budget.date | date:'dd/MM/yyyy' }}</td>
+          <td>{{ budget.category }}</td>
+          <td>{{ budget.status }}</td>
+          <td>{{ budget.responsible }}</td>
+          <td>
+            <button (click)="editBudget(budget.id)">Editează</button>
+            <button (click)="deleteBudget(budget.id)">Șterge</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

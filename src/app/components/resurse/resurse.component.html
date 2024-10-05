@@ -1,0 +1,30 @@
+<!-- resources.component.html -->
+<div class="resources-container">
+    <h1>Resurse</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Denumire Resursă</th>
+          <th>Tip Resursă</th>
+          <th>Disponibilitate</th>
+          <th>Responsabil</th>
+          <th>Acțiuni</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let resource of resources">
+          <td>{{ resource.id }}</td>
+          <td>{{ resource.name }}</td>
+          <td>{{ resource.type }}</td>
+          <td>{{ resource.availability ? 'Disponibil' : 'Indisponibil' }}</td>
+          <td>{{ resource.responsible }}</td>
+          <td>
+            <button (click)="editResource(resource.id)">Editează</button>
+            <button (click)="deleteResource(resource.id)">Șterge</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
